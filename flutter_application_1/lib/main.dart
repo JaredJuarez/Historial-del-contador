@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Secondpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -166,6 +167,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 ElevatedButton(
                   onPressed: _limpiarHistorial,
                   child: const Text('Limpiar'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SecondPage(),
+                      ),
+                    );
+                  },
+                  child: const Text('Ir a Segunda Página'),
                 ),
               ],
             ),
